@@ -27,8 +27,8 @@ myMap[3] = 30;
 ### 查
 
 ```c++
-auto iter = mymap.find(1);
-if (iter != mymap.end()) {
+auto iter = myMap.find(1);
+if (iter != myMap.end()) {
     cout << "Found: " << iter->second << endl;
 } else {
     cout << "Not found." << endl;

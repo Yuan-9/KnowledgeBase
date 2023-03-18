@@ -26,21 +26,22 @@ myString.append(" This is another new sentence.");
 ### 查
 
 ```c++
-auto iter = myMap.find(1);
-if (iter != myMap.end()) {
-    cout << "Found: " << iter->second << endl;
+size_t pos = myString.find("world");
+if (pos != string::npos) {
+    cout << "Found at position: " << pos << endl;
 } else {
-    cout << "Not found." << endl;
+    cout << "Not found" << endl;
 }
 ```
 
 ### 改
 
 ```c++
-mymap[1] = 100;
+//insert()：在指定位置插入子串。
+myString.insert(5, " beautiful");
+//replace()：替换指定位置开始的一定数量的字符为另一个字符串。
+myString.replace(6, 9, "wonderful");
 ```
-
-
 
 ### 删
 
@@ -53,16 +54,24 @@ myString.erase(5, 7); // 从索引5开始，删除7个字符
 #### 使用迭代器遍历：
 
 ```c++
-for (auto iter = mymap.begin(); iter != mymap.end(); ++iter) {
-    cout << "Key: " << iter->first << ", Value: " << iter->second << endl;
+for (auto it = myString.begin(); it != myString.end(); ++it) {
+    cout << *it << endl;
 }
 ```
 
 #### 使用for循环遍历：
 
 ```c++
-for (const auto& elem : mymap) {
-    cout << "Key: " << elem.first << ", Value: " << elem.second << endl;
+for (char c : myString) {
+    cout << c << endl;
+}
+```
+
+#### 使用下标遍历：
+
+```c++
+for (size_t i = 0; i < myString.length(); ++i) {
+    cout << myString[i] << endl;
 }
 ```
 

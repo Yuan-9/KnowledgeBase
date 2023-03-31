@@ -11,7 +11,7 @@ WHERE condition;
 ## DELETE
 
 ```sql
-DELETE t1 FROM t1 LEFT JOIN t2 ON t1.id=t2.id WHERE t2.id IS NULL;
+DELETE FROM t1 LEFT JOIN t2 ON t1.id=t2.id WHERE t2.id IS NULL;
 ```
 
 ## LEFT JOIN
